@@ -35,21 +35,44 @@ public class NL4OpenAPI {
 		switch (args.length) {
 			case 1 : 
 				srcFileName = args[0];
+				if(!srcFileName.contains( "." + defaultFileExtension)) {
+					srcFileName += "." + defaultFileExtension;
+				}
 				break;
 			case 2 : 
 				srcFileName = args[0];
 				dstFileName = args[1];
+				if(!srcFileName.contains( "." + defaultFileExtension)) {
+					srcFileName += "." + defaultFileExtension;
+				}
+				if(!dstFileName.contains( "." + defaultFileExtension)) {
+					dstFileName += "." + defaultFileExtension;
+				}
 		}
 		
 		configBabel();
 		openapi2NL();
                 
 	}
+	
+	public NL4OpenAPI(String newSrcFileName, String newDstFileName) {
+		srcFileName = newSrcFileName;
+		dstFileName = newDstFileName;
+		if(!srcFileName.contains( "." + defaultFileExtension)) {
+			srcFileName += "." + defaultFileExtension;
+		}
+		if(!dstFileName.contains( "." + defaultFileExtension)) {
+			dstFileName += "." + defaultFileExtension;
+		}
+		
+		configBabel();	
+	}
 
 	// Apply NLP to existing OpenAPI to add descriptions
-	private static void openapi2NL() {
+	public static void openapi2NL() {
 		
 		// Parameters of NL4APIdocs
+		HashMap<String,String> generalHashMap = new HashMap<>();
 		ArrayList<HashMap<String,String>> fullParametersList = new ArrayList<HashMap<String,String>>();
 		ArrayList<HashMap<String,String>> parametersList = new ArrayList<HashMap<String,String>>();
 		ArrayList<HashMap<String,String>> fullPropertiesList = new ArrayList<HashMap<String,String>>();
@@ -61,7 +84,7 @@ public class NL4OpenAPI {
 		//JSON parser object to parse read file
 		JsonParser jsonParser = new JsonParser();
          
-        try (FileReader reader = new FileReader(srcFileName + "." + defaultFileExtension))
+        try (FileReader reader = new FileReader(srcFileName))
         {
         	String openapiTitle = "data";
         	
@@ -107,11 +130,11 @@ public class NL4OpenAPI {
 		        		parameterHashMap.put("ptype", "property");
 		        		parametersList.add(parameterHashMap);
 		        		fullPropertiesList.add(parameterHashMap);
-		
-		                String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2);
+
+		        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap);
 		                System.out.println(parameterDescription);
 		                
-		                //TODO: add description to new OpenAPI json
+		                // add description to new OpenAPI json
 		                openapiComponentsProperties.getAsJsonObject(path).addProperty("description", parameterDescription);
 		                
 	            	} catch(Exception e) {
@@ -184,9 +207,8 @@ public class NL4OpenAPI {
 		  	        		parameterHashMap.put("ptype", "parameter");
 		  	        		parametersList.add(parameterHashMap);
 		  	        		fullParametersList.add(parameterHashMap);
-		
-		  	                
-		  	                String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2);
+
+		  	        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap);
 		  	                System.out.println(parameterDescription);
 		  	                
 		  	                //TODO: add description to new OpenAPI json
@@ -206,7 +228,7 @@ public class NL4OpenAPI {
 		    		apiHashMap.put("methodName", methodName);
 		    		
 		    		try {
-		                String methodDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 1);
+		    			String methodDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 1, generalHashMap);
 	
 		                //TODO: add description to new OpenAPI json
 		                obj.getAsJsonObject("paths").getAsJsonObject(path).getAsJsonObject("get")
@@ -225,7 +247,7 @@ public class NL4OpenAPI {
 
             
             try {
-	            String apiDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 0);
+	            String apiDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 0, generalHashMap);
 	            System.out.println(apiDescription);
 	            
                 //TODO: add description to new OpenAPI json
@@ -236,7 +258,7 @@ public class NL4OpenAPI {
             }
             
             //Write JSON file
-            try (FileWriter file = new FileWriter(dstFileName + "." + defaultFileExtension)) {
+            try (FileWriter file = new FileWriter(dstFileName)) {
  
 	            file.write(toPrettyFormat(obj.toString()));
 	            file.flush();
