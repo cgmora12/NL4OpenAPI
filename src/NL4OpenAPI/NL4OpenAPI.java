@@ -12,11 +12,13 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -98,13 +100,13 @@ public class NL4OpenAPI {
     		try {
 	        	JsonObject openapiComponentsProperties = (JsonObject) obj.getAsJsonObject("components")
 	        			.getAsJsonObject("schemas").getAsJsonObject("mainComponent").getAsJsonObject("properties");
-	    		Set<String> openapiComponentsPropertiesKeys = openapiComponentsProperties.keySet();
-	    		Iterator<String> openapiComponentsPropertiesKeyIterator = openapiComponentsPropertiesKeys.iterator();
+	    		Set<Entry<String, JsonElement>> openapiComponentsPropertiesKeys = openapiComponentsProperties.entrySet();
+	    		Iterator<Entry<String, JsonElement>> openapiComponentsPropertiesKeyIterator = openapiComponentsPropertiesKeys.iterator();
 	    		
 	    		while (openapiComponentsPropertiesKeyIterator.hasNext()) {
 	            	parametersList.clear();
 	            	try {
-	            		String path = (String) openapiComponentsPropertiesKeyIterator.next();
+	            		String path = (String) openapiComponentsPropertiesKeyIterator.next().getKey();
 	            		  
 		        		HashMap<String, String> parameterHashMap = new HashMap<>();
 		        		parameterHashMap.put("name", path);
@@ -147,11 +149,11 @@ public class NL4OpenAPI {
 
     		try {
 	        	JsonObject openapiPaths = (JsonObject) obj.getAsJsonObject("paths");
-	    		Set<String> openapiPathsKeys = openapiPaths.keySet();
-	    		Iterator<String> openapiPathsKeyIterator = openapiPathsKeys.iterator();
+	    		Set<Entry<String, JsonElement>> openapiPathsKeys = openapiPaths.entrySet();
+	    		Iterator<Entry<String, JsonElement>> openapiPathsKeyIterator = openapiPathsKeys.iterator();
 	    		
 	    		while (openapiPathsKeyIterator.hasNext()) {
-	    			String path = (String) openapiPathsKeyIterator.next();
+	    			String path = (String) openapiPathsKeyIterator.next().getKey();
 	    			
 	                fullParametersList.clear();
 	                
