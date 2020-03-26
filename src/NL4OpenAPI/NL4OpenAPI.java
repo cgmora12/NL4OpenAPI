@@ -96,6 +96,13 @@ public class NL4OpenAPI {
         	JsonObject openapiInfo = (JsonObject) obj.get("info");
         	openapiTitle = openapiInfo.get("title").toString();            
     		apiHashMap.put("fileName", openapiTitle);
+        	
+    		String url = "localhost:8080";
+    		try {
+	        	JsonArray openapiServers = (JsonArray) obj.get("servers");
+	        	JsonObject openapiUrls = (JsonObject) openapiServers.get(0);
+	        	url = openapiUrls.get("url").getAsString();
+    		} catch(Exception e) {}
 
     		try {
 	        	JsonObject openapiComponentsProperties = (JsonObject) obj.getAsJsonObject("components")
@@ -133,7 +140,7 @@ public class NL4OpenAPI {
 		        		parametersList.add(parameterHashMap);
 		        		fullPropertiesList.add(parameterHashMap);
 
-		        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap);
+		        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap, url);
 		                System.out.println(parameterDescription);
 		                
 		                // add description to new OpenAPI json
@@ -210,7 +217,7 @@ public class NL4OpenAPI {
 		  	        		parametersList.add(parameterHashMap);
 		  	        		fullParametersList.add(parameterHashMap);
 
-		  	        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap);
+		  	        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap, url);
 		  	                System.out.println(parameterDescription);
 		  	                
 		  	                //TODO: add description to new OpenAPI json
@@ -230,7 +237,7 @@ public class NL4OpenAPI {
 		    		apiHashMap.put("methodName", methodName);
 		    		
 		    		try {
-		    			String methodDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 1, generalHashMap);
+		    			String methodDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 1, generalHashMap, url);
 	
 		                //TODO: add description to new OpenAPI json
 		                obj.getAsJsonObject("paths").getAsJsonObject(path).getAsJsonObject("get")
@@ -249,7 +256,7 @@ public class NL4OpenAPI {
 
             
             try {
-	            String apiDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 0, generalHashMap);
+	            String apiDescription = NLGenT.generateText(apiHashMap, fullPropertiesList, 0, generalHashMap, url);
 	            System.out.println(apiDescription);
 	            
                 //TODO: add description to new OpenAPI json

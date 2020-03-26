@@ -102,7 +102,7 @@
       "get": {
         "summary": "GET Headteacher",
         "operationId": "getHeadteacher",
-        "description": "Find \"schools_list\" by Headteacher.\nThis API method can be used to find \"schools_list\" data by Headteacher, and you must filter the results by a specific Headteacher.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Headteacher/\"Emme Ford\"\" or \"/?Headteacher\u003d\"Emme Ford\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Headteacher\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Headteacher\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Headteacher\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Headteacher/Emme Ford\" or \"http://localhost:8080/?Headteacher\u003dEmme Ford\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -167,7 +167,7 @@
       "get": {
         "summary": "GET Address_1",
         "operationId": "getAddress_1",
-        "description": "Find \"schools_list\" by Address_1.\nThis API method can be used to find \"schools_list\" data by Address_1, and you must filter the results by a specific Address_1.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Address_1/\"Keighley Close\"\" or \"/?Address_1\u003d\"Keighley Close\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Address_1\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Address_1\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Address_1\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Address_1/Keighley Close\" or \"http://localhost:8080/?Address_1\u003dKeighley Close\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -232,7 +232,7 @@
       "get": {
         "summary": "GET DFE_Code",
         "operationId": "getDFE_Code",
-        "description": "Find \"schools_list\" by DFE_Code.\nThis API method can be used to find \"schools_list\" data by DFE_Code, and you must filter the results by a specific DFE_Code.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/DFE_Code/2005\" or \"/?DFE_Code\u003d2005\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by DFE_Code\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by DFE_Code\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific DFE_Code\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/DFE_Code/2005\" or \"http://localhost:8080/?DFE_Code\u003d2005\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -297,7 +297,7 @@
       "get": {
         "summary": "GET Executive_headteacher",
         "operationId": "getExecutive_headteacher",
-        "description": "Find \"schools_list\" by Executive_headteacher.\nThis API method can be used to find \"schools_list\" data by Executive_headteacher, and you must filter the results by a specific Executive_headteacher.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Executive_headteacher/\"\"\" or \"/?Executive_headteacher\u003d\"\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Executive_headteacher\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Executive_headteacher\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Executive_headteacher\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Executive_headteacher/\" or \"http://localhost:8080/?Executive_headteacher\u003d\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -362,7 +362,7 @@
       "get": {
         "summary": "GET Status",
         "operationId": "getStatus",
-        "description": "Find \"schools_list\" by Status.\nThis API method can be used to find \"schools_list\" data by Status, and you must filter the results by a specific Status.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Status/\"ACAD\"\" or \"/?Status\u003d\"ACAD\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Status\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Status\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Status\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Status/ACAD\" or \"http://localhost:8080/?Status\u003dACAD\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -427,7 +427,7 @@
       "get": {
         "summary": "GET Type",
         "operationId": "getType",
-        "description": "Find \"schools_list\" by Type.\nThis API method can be used to find \"schools_list\" data by Type, and you must filter the results by a specific Type.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Type/\"P\"\" or \"/?Type\u003d\"P\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Type\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Type\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Type\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Type/P\" or \"http://localhost:8080/?Type\u003dP\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -492,7 +492,7 @@
       "get": {
         "summary": "GET Post_Code",
         "operationId": "getPost_Code",
-        "description": "Find \"schools_list\" by Post_Code.\nThis API method can be used to find \"schools_list\" data by Post_Code, and you must filter the results by a specific Post_Code.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Post_Code/\"HX2 9DG\"\" or \"/?Post_Code\u003d\"HX2 9DG\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Post_Code\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Post_Code\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Post_Code\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Post_Code/HX2 9DG\" or \"http://localhost:8080/?Post_Code\u003dHX2 9DG\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -557,7 +557,7 @@
       "get": {
         "summary": "GET Telephone",
         "operationId": "getTelephone",
-        "description": "Find \"schools_list\" by Telephone.\nThis API method can be used to find \"schools_list\" data by Telephone, and you must filter the results by a specific Telephone.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Telephone/\"01422 246610\"\" or \"/?Telephone\u003d\"01422 246610\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Telephone\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Telephone\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Telephone\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Telephone/01422 246610\" or \"http://localhost:8080/?Telephone\u003d01422 246610\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -622,7 +622,7 @@
       "get": {
         "summary": "GET schools_list",
         "operationId": "getschools_list",
-        "description": "Find all \"schools_list\".\nThis API method can be used to find all \"schools_list\", and you can filter the results by Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/\", whose result would include all the records until the limit.\nIt is possible to specify the \"limit\" and the \"offset\" parameters in order to paginate the results, or \"visualisation\" to show information in charts.",
+        "description": "\u003cb\u003eFind all \"schools_list\"\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find all \"schools_list\"\u003c/b\u003e, and you can \u003cb\u003efilter the results by Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/\", whose result would include all the records until the limit.\n \nFurthermore, the results can be \u003cb\u003efiltered\u003c/b\u003e as mentioned before using the following \u003cb\u003epattern \"/?field1\u003dvalue1\u0026field2\u003dvalue2\u0026...\"\u003c/b\u003e.\n \nAn \u003cb\u003eexample\u003c/b\u003e of this type of filtering is: \"http://localhost:8080/?Status\u003dACAD\"\n \nIt is possible to specify the \"limit\" and the \"offset\" parameters in order to paginate the results, or \"visualisation\" to show information in charts.",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -805,7 +805,7 @@
       "get": {
         "summary": "GET visualisation charts",
         "operationId": "getvisualisation",
-        "description": "Find \"schools_list\" by visualisation.\nThis API method can be used to find \"schools_list\" data by visualisation, and you must filter the results by a specific visualisation.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/visualisation/\" or \"/?visualisation\u003d\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by visualisation\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by visualisation\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific visualisation\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/visualisation/\" or \"http://localhost:8080/?visualisation\u003d\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -844,7 +844,7 @@
       "get": {
         "summary": "GET School_Wards",
         "operationId": "getSchool_Wards",
-        "description": "Find \"schools_list\" by School_Wards.\nThis API method can be used to find \"schools_list\" data by School_Wards, and you must filter the results by a specific School_Wards.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/School_Wards/\"Illingworth and Mixenden\"\" or \"/?School_Wards\u003d\"Illingworth and Mixenden\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by School_Wards\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by School_Wards\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific School_Wards\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/School_Wards/Illingworth and Mixenden\" or \"http://localhost:8080/?School_Wards\u003dIllingworth and Mixenden\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -898,7 +898,7 @@
             },
             "in": "path",
             "name": "School_Wards",
-            "description": "The parameter \"School_Wards\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"School_Wards\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  School (establishment where a seat of higher learning is housed, including administrative and living quarters as well as facilities for research and teaching) Wards (block forming a division of a hospital (or a suite of rooms) shared by patients who need a similar kind of care).\n",
             "required": true,
             "example": "Illingworth and Mixenden"
           }
@@ -909,7 +909,7 @@
       "get": {
         "summary": "GET Fax",
         "operationId": "getFax",
-        "description": "Find \"schools_list\" by Fax.\nThis API method can be used to find \"schools_list\" data by Fax, and you must filter the results by a specific Fax.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Fax/\"01422 246612\"\" or \"/?Fax\u003d\"01422 246612\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Fax\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Fax\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Fax\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Fax/01422 246612\" or \"http://localhost:8080/?Fax\u003d01422 246612\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -937,7 +937,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -946,7 +946,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -955,7 +955,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -963,7 +963,7 @@
             },
             "in": "path",
             "name": "Fax",
-            "description": "The parameter \"Fax\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"Fax\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  Fax (duplicator that transmits the copy by wire or radio).\n",
             "required": true,
             "example": "01422 246612"
           }
@@ -974,7 +974,7 @@
       "get": {
         "summary": "GET School_Name",
         "operationId": "getSchool_Name",
-        "description": "Find \"schools_list\" by School_Name.\nThis API method can be used to find \"schools_list\" data by School_Name, and you must filter the results by a specific School_Name.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/School_Name/\"Abbey Park Academy\"\" or \"/?School_Name\u003d\"Abbey Park Academy\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by School_Name\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by School_Name\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific School_Name\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/School_Name/Abbey Park Academy\" or \"http://localhost:8080/?School_Name\u003dAbbey Park Academy\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1002,7 +1002,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1011,7 +1011,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1020,7 +1020,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1028,7 +1028,7 @@
             },
             "in": "path",
             "name": "School_Name",
-            "description": "The parameter \"School_Name\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"School_Name\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  School (an educational institution) Name.\n",
             "required": true,
             "example": "Abbey Park Academy"
           }
@@ -1039,7 +1039,7 @@
       "get": {
         "summary": "GET NOR",
         "operationId": "getNOR",
-        "description": "Find \"schools_list\" by NOR.\nThis API method can be used to find \"schools_list\" data by NOR, and you must filter the results by a specific NOR.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/NOR/210\" or \"/?NOR\u003d210\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by NOR\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by NOR\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific NOR\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/NOR/210\" or \"http://localhost:8080/?NOR\u003d210\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1067,7 +1067,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1076,7 +1076,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1085,7 +1085,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1104,7 +1104,7 @@
       "get": {
         "summary": "GET Previous_DFE_Code",
         "operationId": "getPrevious_DFE_Code",
-        "description": "Find \"schools_list\" by Previous_DFE_Code.\nThis API method can be used to find \"schools_list\" data by Previous_DFE_Code, and you must filter the results by a specific Previous_DFE_Code.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Previous_DFE_Code/\"\"\" or \"/?Previous_DFE_Code\u003d\"\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Previous_DFE_Code\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Previous_DFE_Code\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Previous_DFE_Code\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Previous_DFE_Code/\" or \"http://localhost:8080/?Previous_DFE_Code\u003d\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1132,7 +1132,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1141,7 +1141,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1150,7 +1150,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1158,7 +1158,7 @@
             },
             "in": "path",
             "name": "Previous_DFE_Code",
-            "description": "The parameter \"Previous_DFE_Code\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"Previous_DFE_Code\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  Previous (previous is an open source emulator of the proprietary 68k-based NeXT computer system family, aiming at emulating the original 68030-based NeXT Computer and the 68040-based NeXTstation and NeXTcube computers.) DFE Code (a set of rules or principles or laws (especially written ones)).\n",
             "required": true,
             "example": ""
           }
@@ -1169,7 +1169,7 @@
       "get": {
         "summary": "GET Website",
         "operationId": "getWebsite",
-        "description": "Find \"schools_list\" by Website.\nThis API method can be used to find \"schools_list\" data by Website, and you must filter the results by a specific Website.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Website/\"http://www.abbeyparkacademy.org\"\" or \"/?Website\u003d\"http://www.abbeyparkacademy.org\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Website\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Website\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Website\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Website/http://www.abbeyparkacademy.org\" or \"http://localhost:8080/?Website\u003dhttp://www.abbeyparkacademy.org\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1197,7 +1197,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1206,7 +1206,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1215,7 +1215,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1223,7 +1223,7 @@
             },
             "in": "path",
             "name": "Website",
-            "description": "The parameter \"Website\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"Website\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  Website (a computer connected to the internet that maintains a series of web pages on the World Wide Web).\n",
             "required": true,
             "example": "http://www.abbeyparkacademy.org"
           }
@@ -1234,7 +1234,7 @@
       "get": {
         "summary": "GET Address_2",
         "operationId": "getAddress_2",
-        "description": "Find \"schools_list\" by Address_2.\nThis API method can be used to find \"schools_list\" data by Address_2, and you must filter the results by a specific Address_2.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Address_2/\"Illingworth\"\" or \"/?Address_2\u003d\"Illingworth\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Address_2\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Address_2\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Address_2\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Address_2/Illingworth\" or \"http://localhost:8080/?Address_2\u003dIllingworth\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1262,7 +1262,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1271,7 +1271,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1280,7 +1280,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1288,7 +1288,7 @@
             },
             "in": "path",
             "name": "Address_2",
-            "description": "The parameter \"Address_2\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"Address_2\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  Address (the place where a person or organization can be found or communicated with) 2.\n",
             "required": true,
             "example": "Illingworth"
           }
@@ -1299,7 +1299,7 @@
       "get": {
         "summary": "GET Address_3",
         "operationId": "getAddress_3",
-        "description": "Find \"schools_list\" by Address_3.\nThis API method can be used to find \"schools_list\" data by Address_3, and you must filter the results by a specific Address_3.\nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nAn example of using this method is \"/Address_3/\"HALIFAX\"\" or \"/?Address_3\u003d\"HALIFAX\"\", whose result would include at least the following record:\n{\n  \"Status\" : \"\"ACAD\"\", \n  \"Headteacher\" : \"\"Emme Ford\"\", \n  \"Telephone\" : \"\"01422 246610\"\", \n  \"Executive_headteacher\" : \"\"\"\", \n  \"Website\" : \"\"http://www.abbeyparkacademy.org\"\", \n  \"School_Name\" : \"\"Abbey Park Academy\"\", \n  \"School_Wards\" : \"\"Illingworth and Mixenden\"\", \n  \"NOR\" : \"210\", \n  \"Previous_DFE_Code\" : \"\"\"\", \n  \"Post_Code\" : \"\"HX2 9DG\"\", \n  \"Type\" : \"\"P\"\", \n  \"DFE_Code\" : \"2005\", \n  \"Address_1\" : \"\"Keighley Close\"\", \n  \"Address_2\" : \"\"Illingworth\"\", \n  \"Address_3\" : \"\"HALIFAX\"\", \n  \"Fax\" : \"\"01422 246612\"\"\n}",
+        "description": "\u003cb\u003eFind \"schools_list\" by Address_3\u003c/b\u003e.\n \nThis \u003cb\u003eAPI method can be used to find \"schools_list\" data by Address_3\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Address_3\u003c/b\u003e.\n \nThese results will contain the following fields: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"http://localhost:8080/Address_3/HALIFAX\" or \"http://localhost:8080/?Address_3\u003dHALIFAX\", whose result would include at least the following record:\n{\n  \"Status\" : \"ACAD\", \n  \"Headteacher\" : \"Emme Ford\", \n  \"Telephone\" : \"01422 246610\", \n  \"Executive_headteacher\" : \"\", \n  \"Website\" : \"http://www.abbeyparkacademy.org\", \n  \"School_Name\" : \"Abbey Park Academy\", \n  \"School_Wards\" : \"Illingworth and Mixenden\", \n  \"NOR\" : 210, \n  \"Previous_DFE_Code\" : \"\", \n  \"Post_Code\" : \"HX2 9DG\", \n  \"Type\" : \"P\", \n  \"DFE_Code\" : 2005, \n  \"Address_1\" : \"Keighley Close\", \n  \"Address_2\" : \"Illingworth\", \n  \"Address_3\" : \"HALIFAX\", \n  \"Fax\" : \"01422 246612\"\n}",
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1327,7 +1327,7 @@
             },
             "in": "query",
             "name": "limit",
-            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"limit\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  limit (the greatest possible degree of something).\n",
             "example": "10000"
           },
           {
@@ -1336,7 +1336,7 @@
             },
             "in": "query",
             "name": "offset",
-            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\n",
+            "description": "The parameter \"offset\" is of type \"integer\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  offset (cause (printed matter) to transfer or smear onto another surface).\n",
             "example": "0"
           },
           {
@@ -1345,7 +1345,7 @@
             },
             "in": "query",
             "name": "visualisation",
-            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\n"
+            "description": "The parameter \"visualisation\" is of type \"string\".\nThis parameter is not required and must be in \"query\".\nIt indicates the  visualisation (a mental image that is similar to a visual perception).\n"
           },
           {
             "schema": {
@@ -1353,7 +1353,7 @@
             },
             "in": "path",
             "name": "Address_3",
-            "description": "The parameter \"Address_3\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\n",
+            "description": "The parameter \"Address_3\" is of type \"string\".\nThis parameter is required and  must be in \"path\".\nIt indicates the  Address (the place where a person or organization can be found or communicated with) 3.\n",
             "required": true,
             "example": "HALIFAX"
           }
@@ -1362,7 +1362,7 @@
     }
   },
   "info": {
-    "description": "This API returns data about the \"schools_list\", being able to filter by different characteristics, for example: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nThe API response will be in JSON format, containing a list of objects with properties: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\nIn addition, the following parameters can always be used: visualisation, which is used to show the information graphically; limit, which serves to limit the maximum number of results to show (default 10000); and offset, to indicate from which number to return from the results set, very useful for pagination results.\nAn example of a query would be the following: localhost:8080/Status/\"ACAD\"",
+    "description": "This \u003cb\u003eAPI returns data about the \"schools_list\"\u003c/b\u003e, being able to \u003cb\u003efilter by different characteristics\u003c/b\u003e, for example: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nThe API response will be in \u003cb\u003eJSON format\u003c/b\u003e, containing a \u003cb\u003elist of objects with properties\u003c/b\u003e: Status, Headteacher, Telephone, Executive_headteacher, Website, School_Name, School_Wards, NOR, Previous_DFE_Code, Post_Code, Type, DFE_Code, Address_1, Address_2, Address_3, Fax.\n \nIn addition, the following parameters can always be used: visualisation, which is used to show the information graphically; limit, which serves to limit the maximum number of results to show (default 10000); and offset, to indicate from which number to return from the results set, very useful for pagination results.\n \nAn \u003cb\u003eexample\u003c/b\u003e of a query would be the following: http://localhost:8080/Status/\"ACAD\"",
     "title": "schools_list",
     "version": "1.0.0"
   }
