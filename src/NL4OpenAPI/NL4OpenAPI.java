@@ -94,7 +94,7 @@ public class NL4OpenAPI {
         	JsonObject obj = (JsonObject) jsonParser.parse(reader);
         	
         	JsonObject openapiInfo = (JsonObject) obj.get("info");
-        	openapiTitle = openapiInfo.get("title").toString();            
+        	openapiTitle = openapiInfo.get("title").toString().replace("\"", "");            
     		apiHashMap.put("fileName", openapiTitle);
         	
     		String url = "localhost:8080";
@@ -110,17 +110,18 @@ public class NL4OpenAPI {
 	    		Set<Entry<String, JsonElement>> openapiComponentsPropertiesKeys = openapiComponentsProperties.entrySet();
 	    		Iterator<Entry<String, JsonElement>> openapiComponentsPropertiesKeyIterator = openapiComponentsPropertiesKeys.iterator();
 	    		
+	    		ArrayList<HashMap<String, String>> componentsHashMaps = new ArrayList<HashMap<String, String>>();
 	    		while (openapiComponentsPropertiesKeyIterator.hasNext()) {
 	            	parametersList.clear();
 	            	try {
 	            		String path = (String) openapiComponentsPropertiesKeyIterator.next().getKey();
-	            		  
+		            		  
 		        		HashMap<String, String> parameterHashMap = new HashMap<>();
 		        		parameterHashMap.put("name", path);
 		        		
 		        		String example = "";
 		        		try {
-		        			example = openapiComponentsProperties.getAsJsonObject(path).get("example").toString();
+		        			example = openapiComponentsProperties.getAsJsonObject(path).get("example").toString().replace("\"", "");
 		        		} catch(Exception e) {
 		            		System.out.println(e.getMessage());
 		            	}
@@ -131,7 +132,7 @@ public class NL4OpenAPI {
 		        		
 		        		String type = "";
 		        		try {
-		        			type = openapiComponentsProperties.getAsJsonObject(path).get("type").toString();
+		        			type = openapiComponentsProperties.getAsJsonObject(path).get("type").toString().replace("\"", "");
 		        		} catch(Exception e) {
 		            		System.out.println(e.getMessage());
 		            	}
@@ -140,11 +141,11 @@ public class NL4OpenAPI {
 		        		parametersList.add(parameterHashMap);
 		        		fullPropertiesList.add(parameterHashMap);
 
-		        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap, url);
-		                System.out.println(parameterDescription);
+		        		String componentDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap, url);
+		                System.out.println(componentDescription);
 		                
 		                // add description to new OpenAPI json
-		                openapiComponentsProperties.getAsJsonObject(path).addProperty("description", parameterDescription);
+		                openapiComponentsProperties.getAsJsonObject(path).addProperty("description", componentDescription);
 		                
 	            	} catch(Exception e) {
 	            		System.out.println(e.getMessage());
@@ -158,7 +159,8 @@ public class NL4OpenAPI {
 	        	JsonObject openapiPaths = (JsonObject) obj.getAsJsonObject("paths");
 	    		Set<Entry<String, JsonElement>> openapiPathsKeys = openapiPaths.entrySet();
 	    		Iterator<Entry<String, JsonElement>> openapiPathsKeyIterator = openapiPathsKeys.iterator();
-	    		
+	    		ArrayList<HashMap<String, String>> parametersHashMaps = new ArrayList<HashMap<String, String>>();
+			    		
 	    		while (openapiPathsKeyIterator.hasNext()) {
 	    			String path = (String) openapiPathsKeyIterator.next().getKey();
 	    			
@@ -167,38 +169,42 @@ public class NL4OpenAPI {
 	                try {
 		            	JsonArray openapiPathParameters = (JsonArray) openapiPaths.getAsJsonObject(path).getAsJsonObject("get")
 		            			.getAsJsonArray("parameters");
+		            	
 		        		for (int i = 0; i < openapiPathParameters.size(); i++) {
 		            	   
 		            	   parametersList.clear();
 		            	   
 		            	   JsonObject param = (JsonObject) openapiPathParameters.get(i);
-		            	   String paramName = param.get("name").toString();
+		            	   String paramName = param.get("name").toString().replace("\"", "");
+		            	   		            		
 		            	   HashMap<String, String> parameterHashMap = new HashMap<>();
 		            	   parameterHashMap.put("name", paramName);
 		
 		            	   String example = "";
+		            	   boolean exampleNull = false;
 		            	   try {
-			   	        		example = examplesHashMap.get(paramName);
-			   	        		if(example != null) {
-				   	        		parameterHashMap.put("example", example);
-			   	        		} else {
-			   	        			parameterHashMap.put("example", "");
-			   	        		}
+			   	        		example = examplesHashMap.get(paramName).toString().replace("\"", "");
 		  	        		} catch(Exception e) {
-		  	            		System.out.println(e.getMessage());
+		  	            		//System.out.println(e.getMessage());
+		  	            		exampleNull = true;
 		  	        		}
+		            	    if(exampleNull) {
+			            	   try {				   	        		
+				   	        		String exampleAux = param.get("example").toString().replace("\"", "");
+				   	        		example = exampleAux;
+			  	        		} catch(Exception e) {}
+		            	    }
+			   	        	parameterHashMap.put("example", example);
 		  	        		
 		  	        		String type = "";
 		  	        		try {
-		  	        			type = param.getAsJsonObject("schema").get("type").toString();
-		  	        		} catch(Exception e) {
-		  	            		System.out.println(e.getMessage());
-		  	            	}
+		  	        			type = param.getAsJsonObject("schema").get("type").toString().replace("\"", "");
+		  	        		} catch(Exception e) {}
 		  	        		parameterHashMap.put("type", type);
 		  	        		
 		  	        		String in = "";
 		  	        		try {
-		  	        			in = param.get("in").toString();
+		  	        			in = param.get("in").toString().replace("\"", "");
 		  	        		} catch(Exception e) {
 		  	            		System.out.println(e.getMessage());
 		  	            	}
@@ -217,11 +223,44 @@ public class NL4OpenAPI {
 		  	        		parametersList.add(parameterHashMap);
 		  	        		fullParametersList.add(parameterHashMap);
 
-		  	        		String parameterDescription = NLGenT.generateText(apiHashMap, parametersList, 2, generalHashMap, url);
-		  	                System.out.println(parameterDescription);
-		  	                
+
+		            	    boolean paramCompleted = false;
+		            	    String paramCompletedDescription = "";
+		            	    for(int j = 0; j < parametersHashMaps.size(); j++) {
+								if(parametersHashMaps.get(j).get("name").contentEquals(paramName) &&
+										parametersHashMaps.get(j).get("required").contentEquals(String.valueOf(required)) &&
+										parametersHashMaps.get(j).get("in").contentEquals(in) &&
+										parametersHashMaps.get(j).get("type").contentEquals(type) &&
+										parametersHashMaps.get(j).get("example").contentEquals(example)) {
+										paramCompleted = true;
+										paramCompletedDescription = parametersHashMaps.get(j).get("description");
+								}
+		            	    }
+		            	    
+		  	        		String parameterDescription = "";
+		  	        		if(!paramCompleted) {
+		  	        			parameterDescription = NLGenT.generateText
+		  	        					(apiHashMap, parametersList, 2, generalHashMap, url);
+
+				        		HashMap<String, String> paramCompletedHashMap = new HashMap<>();
+				        		paramCompletedHashMap.put("name", paramName);
+				        		paramCompletedHashMap.put("description", parameterDescription);
+				        		paramCompletedHashMap.put("required", String.valueOf(required));
+				        		paramCompletedHashMap.put("in", in);
+				        		paramCompletedHashMap.put("type", type);
+				        		paramCompletedHashMap.put("example", example);
+				        		parametersHashMaps.add(paramCompletedHashMap);
+			  	                
+		  	        		} else {
+		  	        			parameterDescription = paramCompletedDescription;
+		  	        		}
+		  	        		
+		  	        		System.out.println(parameterDescription);
+			  	                
 		  	                //TODO: add description to new OpenAPI json
 		  	                param.addProperty("description", parameterDescription);
+		  	                
+
 			                
 		            	}
 	                } catch (Exception e) {

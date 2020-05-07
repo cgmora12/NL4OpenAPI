@@ -1,0 +1,822 @@
+{
+  "components" : {
+    "schemas" : {
+      "mainComponent" : {
+        "xml" : {
+          "name" : "mainComponent"
+        },
+        "type" : "object",
+        "properties" : {
+          "Area" : {
+            "type" : "integer",
+            "example" : 36
+          },
+          "Median_Wage" : {
+            "type" : "integer",
+            "example" : 46010
+          },
+          "Mean_Wage" : {
+            "type" : "integer",
+            "example" : 63270
+          },
+          "Employment" : {
+            "type" : "integer",
+            "example" : 9385620
+          },
+          "Entry_Wage" : {
+            "type" : "integer",
+            "example" : 26210
+          },
+          "Standard_Occupational_Code" : {
+            "type" : "string",
+            "example" : " 00-0000"
+          },
+          "Area_Type" : {
+            "type" : "integer",
+            "example" : 1
+          },
+          "Area_Name" : {
+            "type" : "string",
+            "example" : "New York State"
+          },
+          "Experienced_Wage" : {
+            "type" : "integer",
+            "example" : 81790
+          },
+          "Occupational_Title" : {
+            "type" : "string",
+            "example" : "Total. All Occupations"
+          }
+        }
+      }
+    }
+  },
+  "servers" : [ {
+    "url" : "https://wake.dlsi.ua.es/EmploymentAPI"
+  } ],
+  "openapi" : "3.0.0",
+  "paths" : {
+    "/visualisation" : {
+      "get" : {
+        "summary" : "GET visualisation charts",
+        "operationId" : "getvisualisation",
+        "description" : "Get visualisation charts of the data",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        } ]
+      }
+    },
+    "/Median_Wage/{Median_Wage}" : {
+      "get" : {
+        "summary" : "GET Median_Wage",
+        "operationId" : "getMedian_Wage",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Median_Wage",
+          "description" : "Median_Wage",
+          "required" : true,
+          "example" : "46010"
+        } ]
+      }
+    },
+    "/Area_Name/{Area_Name}" : {
+      "get" : {
+        "summary" : "GET Area_Name",
+        "operationId" : "getArea_Name",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "path",
+          "name" : "Area_Name",
+          "description" : "Area_Name",
+          "required" : true,
+          "example" : "New York State"
+        } ]
+      }
+    },
+    "/Standard_Occupational_Code/{Standard_Occupational_Code}" : {
+      "get" : {
+        "summary" : "GET Standard_Occupational_Code",
+        "operationId" : "getStandard_Occupational_Code",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "path",
+          "name" : "Standard_Occupational_Code",
+          "description" : "Standard_Occupational_Code",
+          "required" : true,
+          "example" : " 00-0000"
+        } ]
+      }
+    },
+    "/Entry_Wage/{Entry_Wage}" : {
+      "get" : {
+        "summary" : "GET Entry_Wage",
+        "operationId" : "getEntry_Wage",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Entry_Wage",
+          "description" : "Entry_Wage",
+          "required" : true,
+          "example" : "26210"
+        } ]
+      }
+    },
+    "/Area_Type/{Area_Type}" : {
+      "get" : {
+        "summary" : "GET Area_Type",
+        "operationId" : "getArea_Type",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Area_Type",
+          "description" : "Area_Type",
+          "required" : true,
+          "example" : "1"
+        } ]
+      }
+    },
+    "/Mean_Wage/{Mean_Wage}" : {
+      "get" : {
+        "summary" : "GET Mean_Wage",
+        "operationId" : "getMean_Wage",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Mean_Wage",
+          "description" : "Mean_Wage",
+          "required" : true,
+          "example" : "63270"
+        } ]
+      }
+    },
+    "/Occupational_Title/{Occupational_Title}" : {
+      "get" : {
+        "summary" : "GET Occupational_Title",
+        "operationId" : "getOccupational_Title",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "path",
+          "name" : "Occupational_Title",
+          "description" : "Occupational_Title",
+          "required" : true,
+          "example" : "Total. All Occupations"
+        } ]
+      }
+    },
+    "/Experienced_Wage/{Experienced_Wage}" : {
+      "get" : {
+        "summary" : "GET Experienced_Wage",
+        "operationId" : "getExperienced_Wage",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Experienced_Wage",
+          "description" : "Experienced_Wage",
+          "required" : true,
+          "example" : "81790"
+        } ]
+      }
+    },
+    "/Employment/{Employment}" : {
+      "get" : {
+        "summary" : "GET Employment",
+        "operationId" : "getEmployment",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Employment",
+          "description" : "Employment",
+          "required" : true,
+          "example" : "9385620"
+        } ]
+      }
+    },
+    "/" : {
+      "get" : {
+        "summary" : "GET EmploymentData",
+        "operationId" : "getEmploymentData",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Area_Type",
+          "description" : "Area_Type"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Area",
+          "description" : "Area"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "Area_Name",
+          "description" : "Area_Name"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "Standard_Occupational_Code",
+          "description" : "Standard_Occupational_Code"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "Occupational_Title",
+          "description" : "Occupational_Title"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Employment",
+          "description" : "Employment"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Mean_Wage",
+          "description" : "Mean_Wage"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Median_Wage",
+          "description" : "Median_Wage"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Entry_Wage",
+          "description" : "Entry_Wage"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "Experienced_Wage",
+          "description" : "Experienced_Wage"
+        } ]
+      }
+    },
+    "/Area/{Area}" : {
+      "get" : {
+        "summary" : "GET Area",
+        "operationId" : "getArea",
+        "description" : "Use value 'all' in a parameter for non-empty values",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "limit",
+          "description" : "Maximum number of results",
+          "example" : "10000"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "query",
+          "name" : "offset",
+          "description" : "Starting index for results",
+          "example" : "0"
+        }, {
+          "schema" : {
+            "type" : "string"
+          },
+          "in" : "query",
+          "name" : "visualisation",
+          "description" : "Visualisation of the data via charts"
+        }, {
+          "schema" : {
+            "type" : "integer"
+          },
+          "in" : "path",
+          "name" : "Area",
+          "description" : "Area",
+          "required" : true,
+          "example" : "36"
+        } ]
+      }
+    }
+  },
+  "info" : {
+    "description" : "Obtaining the EmploymentData",
+    "title" : "EmploymentData",
+    "version" : "1.0.0"
+  }
+}

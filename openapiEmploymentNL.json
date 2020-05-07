@@ -1,0 +1,901 @@
+{
+  "components": {
+    "schemas": {
+      "mainComponent": {
+        "xml": {
+          "name": "mainComponent"
+        },
+        "type": "object",
+        "properties": {
+          "Area": {
+            "type": "integer",
+            "example": 36,
+            "description": "The property Area is of type integer and an example is \"36\".\nIt indicates the the extent of a 2-dimensional surface enclosed within a boundary.\n"
+          },
+          "Median_Wage": {
+            "type": "integer",
+            "example": 46010,
+            "description": "The property Median_Wage is of type integer and an example is \"46010\".\nIt indicates the Wage of Median (the value below which 50% of the cases fall).\n"
+          },
+          "Mean_Wage": {
+            "type": "integer",
+            "example": 63270,
+            "description": "The property Mean_Wage is of type integer and an example is \"63270\".\nIt indicates the Wage of Mean (the sum of the values of a random variable divided by the number of values).\n"
+          },
+          "Employment": {
+            "type": "integer",
+            "example": 9385620,
+            "description": "The property Employment is of type integer and an example is \"9385620\".\nIt indicates the employment is the debut studio album by English indie rock band Kaiser Chiefs, released in March 2005 on B-Unique Records..\n"
+          },
+          "Entry_Wage": {
+            "type": "integer",
+            "example": 26210,
+            "description": "The property Entry_Wage is of type integer and an example is \"26210\".\nIt indicates the Wage of Entry (a written record of a commercial transaction).\n"
+          },
+          "Standard_Occupational_Code": {
+            "type": "string",
+            "example": " 00-0000",
+            "description": "The property Standard_Occupational_Code is of type string and an example is \" 00-0000\".\nIt indicates the Standard (a board measure \u003d 1980 board feet) Occupational Code (a set of rules or principles or laws (especially written ones)).\n"
+          },
+          "Area_Type": {
+            "type": "integer",
+            "example": 1,
+            "description": "The property Area_Type is of type integer and an example is \"1\".\nIt indicates the Type of Area (the extent of a 2-dimensional surface enclosed within a boundary).\n"
+          },
+          "Area_Name": {
+            "type": "string",
+            "example": "New York State",
+            "description": "The property Area_Name is of type string and an example is \"New York State\".\nIt indicates the Name of Area (a particular geographical region of indefinite boundary (usually serving some special purpose or distinguished by its people or culture or geography)).\n"
+          },
+          "Experienced_Wage": {
+            "type": "integer",
+            "example": 81790,
+            "description": "The property Experienced_Wage is of type integer and an example is \"81790\".\nIt indicates the Wage of Experienced (the accumulation of knowledge or skill that results from direct participation in events or activities).\n"
+          },
+          "Occupational_Title": {
+            "type": "string",
+            "example": "Total. All Occupations",
+            "description": "The property Occupational_Title is of type string and an example is \"Total. All Occupations\".\nIt indicates the Title of Occupational.\n"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://wake.dlsi.ua.es/EmploymentAPI"
+    }
+  ],
+  "openapi": "3.0.0",
+  "paths": {
+    "/visualisation": {
+      "get": {
+        "summary": "GET visualisation charts",
+        "operationId": "getvisualisation",
+        "description": "\u003cb\u003eFind EmploymentData by visualisation\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by visualisation\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific visualisation\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/visualisation/\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?visualisation\u003d\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          }
+        ]
+      }
+    },
+    "/Median_Wage/{Median_Wage}": {
+      "get": {
+        "summary": "GET Median_Wage",
+        "operationId": "getMedian_Wage",
+        "description": "\u003cb\u003eFind EmploymentData by Median_Wage\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Median_Wage\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Median_Wage\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Median_Wage/46010\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Median_Wage\u003d46010\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Median_Wage",
+            "description": "The parameter Median_Wage is of type integer and an example is \"46010\".\nThis parameter is required and  must be in path.\nIt indicates the Wage of Median (the value below which 50% of the cases fall).\n",
+            "required": true,
+            "example": "46010"
+          }
+        ]
+      }
+    },
+    "/Area_Name/{Area_Name}": {
+      "get": {
+        "summary": "GET Area_Name",
+        "operationId": "getArea_Name",
+        "description": "\u003cb\u003eFind EmploymentData by Area_Name\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Area_Name\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Area_Name\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Area_Name/New%20York%20State\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Area_Name\u003dNew%20York%20State\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "Area_Name",
+            "description": "The parameter Area_Name is of type string and an example is \"New York State\".\nThis parameter is required and  must be in path.\nIt indicates the Name of Area (a particular geographical region of indefinite boundary (usually serving some special purpose or distinguished by its people or culture or geography)).\n",
+            "required": true,
+            "example": "New York State"
+          }
+        ]
+      }
+    },
+    "/Standard_Occupational_Code/{Standard_Occupational_Code}": {
+      "get": {
+        "summary": "GET Standard_Occupational_Code",
+        "operationId": "getStandard_Occupational_Code",
+        "description": "\u003cb\u003eFind EmploymentData by Standard_Occupational_Code\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Standard_Occupational_Code\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Standard_Occupational_Code\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Standard_Occupational_Code/%2000-0000\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Standard_Occupational_Code\u003d%2000-0000\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "Standard_Occupational_Code",
+            "description": "The parameter Standard_Occupational_Code is of type string and an example is \" 00-0000\".\nThis parameter is required and  must be in path.\nIt indicates the Standard (a board measure \u003d 1980 board feet) Occupational Code (a set of rules or principles or laws (especially written ones)).\n",
+            "required": true,
+            "example": " 00-0000"
+          }
+        ]
+      }
+    },
+    "/Entry_Wage/{Entry_Wage}": {
+      "get": {
+        "summary": "GET Entry_Wage",
+        "operationId": "getEntry_Wage",
+        "description": "\u003cb\u003eFind EmploymentData by Entry_Wage\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Entry_Wage\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Entry_Wage\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Entry_Wage/26210\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Entry_Wage\u003d26210\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Entry_Wage",
+            "description": "The parameter Entry_Wage is of type integer and an example is \"26210\".\nThis parameter is required and  must be in path.\nIt indicates the Wage of Entry (a written record of a commercial transaction).\n",
+            "required": true,
+            "example": "26210"
+          }
+        ]
+      }
+    },
+    "/Area_Type/{Area_Type}": {
+      "get": {
+        "summary": "GET Area_Type",
+        "operationId": "getArea_Type",
+        "description": "\u003cb\u003eFind EmploymentData by Area_Type\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Area_Type\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Area_Type\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Area_Type/1\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Area_Type\u003d1\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Area_Type",
+            "description": "The parameter Area_Type is of type integer and an example is \"1\".\nThis parameter is required and  must be in path.\nIt indicates the Type of Area (the extent of a 2-dimensional surface enclosed within a boundary).\n",
+            "required": true,
+            "example": "1"
+          }
+        ]
+      }
+    },
+    "/Mean_Wage/{Mean_Wage}": {
+      "get": {
+        "summary": "GET Mean_Wage",
+        "operationId": "getMean_Wage",
+        "description": "\u003cb\u003eFind EmploymentData by Mean_Wage\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Mean_Wage\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Mean_Wage\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Mean_Wage/63270\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Mean_Wage\u003d63270\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Mean_Wage",
+            "description": "The parameter Mean_Wage is of type integer and an example is \"63270\".\nThis parameter is required and  must be in path.\nIt indicates the Wage of Mean (the sum of the values of a random variable divided by the number of values).\n",
+            "required": true,
+            "example": "63270"
+          }
+        ]
+      }
+    },
+    "/Occupational_Title/{Occupational_Title}": {
+      "get": {
+        "summary": "GET Occupational_Title",
+        "operationId": "getOccupational_Title",
+        "description": "\u003cb\u003eFind EmploymentData by Occupational_Title\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Occupational_Title\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Occupational_Title\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Occupational_Title/Total.%20All%20Occupations\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Occupational_Title\u003dTotal.%20All%20Occupations\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "Occupational_Title",
+            "description": "The parameter Occupational_Title is of type string and an example is \"Total. All Occupations\".\nThis parameter is required and  must be in path.\nIt indicates the Title of Occupational.\n",
+            "required": true,
+            "example": "Total. All Occupations"
+          }
+        ]
+      }
+    },
+    "/Experienced_Wage/{Experienced_Wage}": {
+      "get": {
+        "summary": "GET Experienced_Wage",
+        "operationId": "getExperienced_Wage",
+        "description": "\u003cb\u003eFind EmploymentData by Experienced_Wage\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Experienced_Wage\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Experienced_Wage\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Experienced_Wage/81790\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Experienced_Wage\u003d81790\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Experienced_Wage",
+            "description": "The parameter Experienced_Wage is of type integer and an example is \"81790\".\nThis parameter is required and  must be in path.\nIt indicates the Wage of Experienced (the accumulation of knowledge or skill that results from direct participation in events or activities).\n",
+            "required": true,
+            "example": "81790"
+          }
+        ]
+      }
+    },
+    "/Employment/{Employment}": {
+      "get": {
+        "summary": "GET Employment",
+        "operationId": "getEmployment",
+        "description": "\u003cb\u003eFind EmploymentData by Employment\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Employment\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Employment\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Employment/9385620\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Employment\u003d9385620\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Employment",
+            "description": "The parameter Employment is of type integer and an example is \"9385620\".\nThis parameter is required and  must be in path.\nIt indicates the employment is the debut studio album by English indie rock band Kaiser Chiefs, released in March 2005 on B-Unique Records..\n",
+            "required": true,
+            "example": "9385620"
+          }
+        ]
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "GET EmploymentData",
+        "operationId": "getEmploymentData",
+        "description": "\u003cb\u003eFind all EmploymentData\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find all EmploymentData\u003c/b\u003e, and you can \u003cb\u003efilter the results by different parameters at the same time\u003c/b\u003e: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/\", whose result would include all the records until the limit.\n \u003cbr\u003eFurthermore, the results can be \u003cb\u003efiltered\u003c/b\u003e as mentioned before using the following \u003cb\u003epattern \"/?field1\u003dvalue1\u0026field2\u003dvalue2\u0026...\"\u003c/b\u003e.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of this type of filtering is: \"https://wake.dlsi.ua.es/EmploymentAPI/?Area\u003d36\u0026Median_Wage\u003d46010\"\n \u003cbr\u003eIt is possible to specify the \"limit\" and the \"offset\" parameters in order to paginate the results.",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Area_Type",
+            "description": "The parameter Area_Type is of type integer and an example is \"1\".\nThis parameter is not required and must be in query.\nIt indicates the Type of Area (the extent of a 2-dimensional surface enclosed within a boundary).\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Area",
+            "description": "The parameter Area is of type integer and an example is \"36\".\nThis parameter is not required and must be in query.\nIt indicates the the extent of a 2-dimensional surface enclosed within a boundary.\n"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "Area_Name",
+            "description": "The parameter Area_Name is of type string and an example is \"New York State\".\nThis parameter is not required and must be in query.\nIt indicates the Name of Area (a particular geographical region of indefinite boundary (usually serving some special purpose or distinguished by its people or culture or geography)).\n"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "Standard_Occupational_Code",
+            "description": "The parameter Standard_Occupational_Code is of type string and an example is \" 00-0000\".\nThis parameter is not required and must be in query.\nIt indicates the Standard (a board measure \u003d 1980 board feet) Occupational Code (a set of rules or principles or laws (especially written ones)).\n"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "Occupational_Title",
+            "description": "The parameter Occupational_Title is of type string and an example is \"Total. All Occupations\".\nThis parameter is not required and must be in query.\nIt indicates the Title of Occupational.\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Employment",
+            "description": "The parameter Employment is of type integer and an example is \"9385620\".\nThis parameter is not required and must be in query.\nIt indicates the employment is the debut studio album by English indie rock band Kaiser Chiefs, released in March 2005 on B-Unique Records..\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Mean_Wage",
+            "description": "The parameter Mean_Wage is of type integer and an example is \"63270\".\nThis parameter is not required and must be in query.\nIt indicates the Wage of Mean (the sum of the values of a random variable divided by the number of values).\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Median_Wage",
+            "description": "The parameter Median_Wage is of type integer and an example is \"46010\".\nThis parameter is not required and must be in query.\nIt indicates the Wage of Median (the value below which 50% of the cases fall).\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Entry_Wage",
+            "description": "The parameter Entry_Wage is of type integer and an example is \"26210\".\nThis parameter is not required and must be in query.\nIt indicates the Wage of Entry (a written record of a commercial transaction).\n"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "Experienced_Wage",
+            "description": "The parameter Experienced_Wage is of type integer and an example is \"81790\".\nThis parameter is not required and must be in query.\nIt indicates the Wage of Experienced (the accumulation of knowledge or skill that results from direct participation in events or activities).\n"
+          }
+        ]
+      }
+    },
+    "/Area/{Area}": {
+      "get": {
+        "summary": "GET Area",
+        "operationId": "getArea",
+        "description": "\u003cb\u003eFind EmploymentData by Area\u003c/b\u003e.\n \u003cbr\u003eThis \u003cb\u003eAPI method can be used to find EmploymentData data by Area\u003c/b\u003e, and you must \u003cb\u003efilter the results by a specific Area\u003c/b\u003e.\n \u003cbr\u003eThese results will contain the following fields: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of using this method is \"https://wake.dlsi.ua.es/EmploymentAPI/Area/36\" or \"https://wake.dlsi.ua.es/EmploymentAPI/?Area\u003d36\", whose result would include at least the following record:\n \u003cbr\u003e{\n  \"Area\" : 36, \n  \"Median_Wage\" : 46010, \n  \"Mean_Wage\" : 63270, \n  \"Employment\" : 9385620, \n  \"Entry_Wage\" : 26210, \n  \"Standard_Occupational_Code\" :  00-0000, \n  \"Area_Type\" : 1, \n  \"Area_Name\" : New York State, \n  \"Experienced_Wage\" : 81790, \n  \"Occupational_Title\" : Total. All Occupations\n}",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/mainComponent"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "",
+            "example": "10000"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "offset",
+            "description": "",
+            "example": "0"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "visualisation",
+            "description": ""
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "path",
+            "name": "Area",
+            "description": "The parameter Area is of type integer and an example is \"36\".\nThis parameter is required and  must be in path.\nIt indicates the the extent of a 2-dimensional surface enclosed within a boundary.\n",
+            "required": true,
+            "example": "36"
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "description": "This \u003cb\u003einteractive documentation\u003c/b\u003e allows to extract information from \u003cb\u003edata about “EmploymentData“\u003c/b\u003e in a simple way without having to be an expert in APIs. This API allows to \u003cb\u003efilter by different characteristics\u003c/b\u003e, for example: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eThe API response will be in \u003cb\u003eJSON format\u003c/b\u003e, containing a \u003cb\u003elist of objects with properties\u003c/b\u003e: Area, Median_Wage, Mean_Wage, Employment, Entry_Wage, Standard_Occupational_Code, Area_Type, Area_Name, Experienced_Wage, Occupational_Title.\n \u003cbr\u003eIn addition, the following parameters can always be used: limit, which serves to limit the maximum number of results to show (default 10000); and offset, to indicate from which number to return from the results set, very useful for pagination results.\n \u003cbr\u003eAn \u003cb\u003eexample\u003c/b\u003e of a query would be the following: https://wake.dlsi.ua.es/EmploymentAPI/Area/36\n \u003cbr\u003e You can also \u003cb\u003equery the API by different parameters at the same time\u003c/b\u003e using the \u003cb\u003eAPI main method\u003c/b\u003e as follows: https://wake.dlsi.ua.es/EmploymentAPI/?Area\u003d36\u0026Median_Wage\u003d46010",
+    "title": "EmploymentData",
+    "version": "1.0.0"
+  }
+}
